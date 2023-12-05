@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Task;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,9 +35,15 @@ Route::get('/tasks', function () {
     ]);
 });
 
+//crear bd amb migracions video
 Route::get('/users', function () {
-    return view('users');
+
+
+    return view('users',[
+        'users' => User::all()
+    ]);
 });
+
 
 Route::get('/contact', function () {
     return view('contact');

@@ -38,18 +38,17 @@
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
 
-                                <?php foreach ($users as $user): ?>
-
+                                @foreach ($users as $user)
 
                                 <tr>
-                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0"><?= $user->id; ?></td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><?= $user->name; ?></td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><?= $user->email; ?></td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><?= $user->password; ?></td>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{ $user->id }}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->name }}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->email }}</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->password }}</td>
 
                                 </tr>
 
-                                <?php endforeach; ?>
+                                @endforeach
 
                                     <!-- More people... -->
                                 </tbody>
